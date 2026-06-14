@@ -1,0 +1,14 @@
+# 過大的影片（已改用 YouTube，且超過 GitHub 100MB 上限）
+assets/videos/德明宿舍宣傳影片.mp4
+
+# 未使用的影片 / 重複檔
+assets/videos/第五組錄製內容PART2.mp4
+*的副本
+
+# 本機開發工具（預覽伺服器、縮圖腳本等，不需上線）
+.claude/
+
+# 系統檔
+Thumbs.db
+desktop.ini
+.DS_Store

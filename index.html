@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>存檔點 — 張芷瑄作品集</title>
+  <meta name="description" content="存檔點 / Meow Village — 張芷瑄作品集" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 漂浮雲朵背景 -->
+  <div class="clouds">
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+    <div class="cloud c4"></div>
+    <div class="cloud c5"></div>
+  </div>
+
+  <!-- 導覽列 -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo"><span class="paw">🐾</span> 存檔點</a>
+    <nav class="nav__links">
+      <a href="#work">作品</a>
+      <a href="#about">關於</a>
+      <a href="#contact">聯絡</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="選單"><span></span><span></span><span></span></button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero__scroll-banner">
+      <div class="hero__save" id="heroSave">存檔點</div>
+    </div>
+    <h1 class="hero__name" id="heroName">張芷瑄作品集</h1>
+    <p class="hero__loading">
+      <span id="heroLoading">Loading... Meow Village</span>
+      <span class="dots"><span>.</span><span>.</span><span>.</span></span>
+    </p>
+    <img class="hero__cats" src="assets/images/_cats-01.png" alt="Meow Village" />
+    <a href="#work" class="btn hero__btn">進入作品 ↓</a>
+  </section>
+
+  <!-- 作品 -->
+  <section class="section" id="work">
+    <h2 class="section__title"><span class="paw">🐱</span> 作品集</h2>
+    <p class="section__desc">點擊任一作品，看完整介紹與圖片</p>
+
+    <!-- 子分類一：大四實習 · 短影音 -->
+    <div class="shorts-block" id="shorts">
+      <h3 class="subsection__title"><span class="paw">🎬</span> <span id="shortsTitle">大四實習 · 短影音</span></h3>
+      <p class="subsection__desc" id="shortsDesc"></p>
+      <div id="shortsGrid"></div>
+    </div>
+
+    <!-- 子分類二：設計 · 影像作品 -->
+    <h3 class="subsection__title"><span class="paw">🎨</span> 設計 · 影像作品</h3>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- 關於 -->
+  <section class="section" id="about">
+    <h2 class="section__title">關於我</h2>
+    <p class="section__desc">About Me</p>
+    <div class="about__inner">
+      <div class="about__text">
+        <p id="aboutIntro"></p>
+        <ul class="skills" id="skills"></ul>
+      </div>
+      <div class="about__cat">🐈</div>
+    </div>
+  </section>
+
+  <!-- 聯絡 -->
+  <section class="section contact" id="contact">
+    <h2 class="section__title">聯絡方式</h2>
+    <a href="#" class="btn" id="contactEmail">email</a>
+    <div class="contact__social" id="social"></div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 張芷瑄 · 存檔點 Meow Village 作品集</p>
+  </footer>
+
+  <!-- 作品詳情燈箱 -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lb__panel">
+      <button class="lb__close" id="lbClose" aria-label="關閉">×</button>
+      <div class="lb__media" id="lbMedia"></div>
+      <div class="lb__thumbs" id="lbThumbs"></div>
+      <div class="lb__info" id="lbInfo"></div>
+    </div>
+  </div>
+
+  <script src="js/works.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
