@@ -264,7 +264,7 @@
     if (!io) {
       io = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
-      }, { threshold: 0.1 });
+      }, { threshold: 0, rootMargin: "0px 0px -40px 0px" });
     }
     document.querySelectorAll(".reveal:not(.in)").forEach(function (el) { io.observe(el); });
   }
@@ -273,6 +273,19 @@
   applyProfile();
   renderShorts();
   buildCards();
-  document.querySelectorAll(".section").forEach(function (el) { el.classList.add("reveal"); });
+  // 作品大區塊（#work）很高，不套整區動畫，避免在窄螢幕上隱藏全部子元素；
+  // 其餘區塊（首頁/關於/聯絡）仍淡入。
+  document.querySelectorAll(".section").forEach(function (el) {
+    if (el.id !== "work") el.classList.add("reveal");
+  });
   observeReveal();
+
+  // 失效保險：載入後若仍有元素卡在隱形（極端情況），一律顯示出來
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      document.querySelectorAll(".reveal:not(.in)").forEach(function (el) {
+        if (el.getBoundingClientRect().top < window.innerHeight * 1.2) el.classList.add("in");
+      });
+    }, 400);
+  });
 })();
