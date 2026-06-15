@@ -67,9 +67,9 @@ const SHORTS = {
 };
 
 const WORKS = [
-  /* 1 ───────── 微笑貸款 ───────── */
+  /* 1 ───────── 微笑貸朲 ───────── */
   {
-    title: "微笑貸款",
+    title: "微笑貸朲",
     category: "AI 生成 · 攝影比賽",
     cover: "assets/images/01微笑貸朲 (1).jpg",
     images: [
@@ -77,7 +77,8 @@ const WORKS = [
       "assets/images/02微笑貸朲 (1).jpg",
       "assets/images/03微笑貸朲 (1).jpg",
       "assets/images/04微笑貸朲 (1).jpg",
-      "assets/images/微笑貸款_參賽證明-1.jpg"
+      "assets/images/微笑貸款_參賽證明-1.jpg",
+      "assets/images/微笑貸朲_佳作-1.jpg"
     ],
     video: null,
     intro: "作品有四張，描述一顆櫻花樹生平的起承轉合。花語：山櫻的花語是「對你微笑」。人們土地開發、工廠建造、廢棄物汙染排放，讓原本完好的大自然從生機蓬勃逐漸走向乾枯。大自然借給人們它身上最美好的東西，也希望人們給予回報，卻遭到不愛惜的人們踐踏。一分微笑，一分代價——自然以千山萬水投桃之際，換以世界回歸乾淨和平。",
