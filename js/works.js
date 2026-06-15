@@ -115,8 +115,11 @@ const WORKS = [
   {
     title: "喝永和，萬事和",
     category: "影片 · 時報金犢獎",
-    cover: "",
-    images: [],
+    cover: "assets/images/喝永和_封面.jpg",   // 影片畫面當縮圖
+    images: [
+      { src: "assets/images/永和豆漿入圍證書.jpg", cap: "2024 時報金犢獎 入圍證書" },
+      { src: "assets/images/永和豆漿入圍證書1.jpg", cap: "2024 時報金犢獎 入圍證書" }
+    ],
     video: "assets/videos/final A.mp4",
     intro: "兩個女生因為工作關係鬧得不愉快，中午能量即將耗盡之時，豆寶及時跳出來解救飢餓之軀，緩和了即將引爆的氣氛，最後大家愉快地一起喝永和豆漿。",
     tools: "Adobe Premiere Pro",
