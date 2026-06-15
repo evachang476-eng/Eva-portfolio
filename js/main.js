@@ -38,9 +38,10 @@
   // 把作品的所有媒體整理成一個清單（影片在前、圖片在後）
   function buildMediaList(w) {
     const list = [];
+    // 圖片在前（點開先看圖、不會一開就播放影片），影片放最後
+    (w.images || []).forEach(function (im) { list.push({ type: "image", src: imgSrc(im), caption: imgCap(im) }); });
     if (w.videos && w.videos.length) w.videos.forEach(function (v) { list.push({ type: "video", src: v }); });
     else if (w.video) list.push({ type: "video", src: w.video });
-    (w.images || []).forEach(function (im) { list.push({ type: "image", src: imgSrc(im), caption: imgCap(im) }); });
     return list;
   }
 

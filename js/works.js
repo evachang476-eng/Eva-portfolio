@@ -78,7 +78,7 @@ const WORKS = [
       { src: "assets/images/遊戲玩法畫面.jpg", cap: "遊戲玩法畫面：玩家可選逃脫方（五隻命定神獸），或抓捕方馬戲團角色（男・月珀／女・夏瑛）；遊玩前先了解玩法。" },
       { src: "assets/images/messageImage_1781532230432.jpg", cap: "遊戲場景：使用 Unity 的 Edgar for Unity 隨機地圖插件，每次開始都會生成不同地圖，增加可玩性。" },
       { src: "assets/images/劇情模式畫面.jpg", cap: "劇情模式：先介紹故事大綱，再以角色對話形式帶出劇情。我負責劇情切換的實現。" },
-      { src: "assets/images/劇情模式畫面-1.jpg", cap: "劇情模式對話畫面。" },
+      { src: "assets/images/劇情模式畫面-1.jpg", cap: "角色切換（換皮模式）：保留角色邏輯本體，只切換外觀與對應資料，成功實現角色切換。" },
       { src: "assets/images/角色切換實現.jpg", cap: "角色切換（換皮模式）：保留角色邏輯本體，只切換外觀與對應資料，成功實現角色切換。" },
       { src: "assets/images/技能畫面.jpg", cap: "技能畫面：以天狗為例，技能是「尋找出口」，發動後協助逃脫方找到出口方向。" },
       { src: "assets/images/AI 音樂.jpg", cap: "配樂：使用 AI 生成的遊戲音樂（The Crimson Ringmaster）。" }
