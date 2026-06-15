@@ -96,19 +96,29 @@
       const row = document.createElement("div");
       row.className = "shorts";
       g.items.forEach(function (it) {
-        const a = document.createElement("a");
-        a.className = "short reveal";
-        a.href = it.url; a.target = "_blank"; a.rel = "noopener";
+        const card = document.createElement("div");
+        card.className = "short reveal";
         const media = it.thumb
           ? '<img src="' + thumb(it.thumb) + '" alt="' + esc(it.title) + '" loading="lazy" />'
           : '<div class="short__ph"><span class="short__brand">' + esc(g.brand) + "</span></div>";
-        a.innerHTML =
+        card.innerHTML =
           '<div class="short__media">' + media +
-            '<span class="short__badge">蝦皮 ↗</span>' +
             '<div class="short__play"></div>' +
           "</div>" +
           '<div class="short__title">' + esc(it.title) + "</div>";
-        row.appendChild(a);
+        // 點擊 → 在網站內直接播放（直式播放器）
+        card.addEventListener("click", function () {
+          openLightbox({
+            title: it.title,
+            category: g.brand,
+            video: it.video,
+            images: [],
+            intro: "", tools: "", role: "", reflection: "", award: "",
+            shopUrl: it.url,
+            portrait: true
+          });
+        });
+        row.appendChild(card);
       });
       wrap.appendChild(row);
     });
@@ -147,7 +157,7 @@
           (w.award ? '<div class="card__award">' + esc(w.award) + "</div>" : "") +
         "</div>";
 
-      card.addEventListener("click", function () { openLightbox(i); });
+      card.addEventListener("click", function () { openLightbox(w); });
       grid.appendChild(card);
     });
     observeReveal();
@@ -176,15 +186,15 @@
       }
       const vid = vimeoId(item.src);
       if (vid) return '<iframe src="https://player.vimeo.com/video/' + vid + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
-      return '<video src="' + item.src + '" controls playsinline></video>';
+      return '<video src="' + item.src + '" controls autoplay playsinline></video>';
     }
     return '<img src="' + item.src + '" alt="" class="lb__gallery-img" />';
   }
 
-  function openLightbox(index) {
-    const w = WORKS[index];
+  function openLightbox(w) {
     const media = buildMediaList(w);
 
+    lbMedia.className = "lb__media" + (w.portrait ? " lb__media--portrait" : "");
     lbMedia.innerHTML = renderMedia(media[0] || null);
 
     // 縮圖切換列（多於一個媒體時才顯示）
@@ -222,6 +232,7 @@
     if (w.tools) html += field("🛠 技術運用 / 工具", w.tools);
     if (w.role) html += field("🎬 我的角色 / 分工", w.role);
     if (w.reflection) html += field("💡 成果與反思", w.reflection);
+    if (w.shopUrl) html += '<a class="lb__shop" href="' + w.shopUrl + '" target="_blank" rel="noopener">在蝦皮觀看原影片 ↗</a>';
     lbInfo.innerHTML = html;
 
     lb.classList.add("open");
