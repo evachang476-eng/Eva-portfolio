@@ -171,8 +171,8 @@ const WORKS = [
 
   /* 5 ───────── 學校宣傳 banner ───────── */
   {
-    title: "德明科大 招生宣傳 Banner",
-    category: "平面設計 · 學校宣傳",
+    title: "平面設計 - 學校宣傳",
+    category: "平面設計",
     coverFit: "contain",   // 寬幅 banner：卡片完整顯示、不裁切
     cover: "assets/images/1001交叉查榜-1RGB_工作區域 1 (1).jpg",
     images: [
@@ -184,7 +184,7 @@ const WORKS = [
       "assets/images/137332 (1).jpg"
     ],
     video: null,
-    intro: "為德明財經科技大學設計的招生宣傳 Banner，主打「大四全年實習、薪資最高」「科技引領未來」「財經成就夢想」等亮點，並實際運用於校外實體看板。",
+    intro: "",
     tools: "平面設計",
     role: "",
     reflection: "",
