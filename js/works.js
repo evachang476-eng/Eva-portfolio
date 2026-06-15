@@ -71,7 +71,7 @@ const WORKS = [
   {
     title: "山嗨驚",
     category: "遊戲 · 畢業專題",
-    cover: "assets/images/遊戲玩法畫面.jpg",
+    cover: "assets/images/山嗨驚_封面.jpg",   // 影片畫面當縮圖（卡片有播放鍵）
     video: "assets/videos/第五組錄製內容PART1.mp4",  // 遊戲實錄影片（點開先播放）
     // 圖片可用 { src, cap } 附上每張說明（cap 會顯示在圖片下方）
     images: [
