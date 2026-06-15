@@ -178,7 +178,10 @@ const WORKS = [
     images: [
       "assets/images/1001交叉查榜-1RGB_工作區域 1 (1).jpg",
       "assets/images/1001交叉查榜-2RGB_工作區域 1 (1).jpg",
-      "assets/images/1001交叉查榜-3RGB_工作區域 1 (1).jpg"
+      "assets/images/1001交叉查榜-3RGB_工作區域 1 (1).jpg",
+      "assets/images/0520-1_工作區域 1 (1).jpg",
+      "assets/images/0520-2_工作區域 1 (1).jpg",
+      "assets/images/137332 (1).jpg"
     ],
     video: null,
     intro: "為德明財經科技大學設計的招生宣傳 Banner，主打「大四全年實習、薪資最高」「科技引領未來」「財經成就夢想」等亮點，並實際運用於校外實體看板。",
