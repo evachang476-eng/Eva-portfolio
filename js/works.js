@@ -261,5 +261,24 @@ const WORKS = [
     role: "",
     reflection: "",
     award: ""
+  },
+
+  /* ───────── 節慶攝影 - 萬聖節 ───────── */
+  {
+    title: "節慶攝影 - 萬聖節",
+    category: "攝影 · 節慶",
+    cover: "assets/images/Screenshot_20240323_011224_OneDrive (1).jpg",
+    images: [
+      "assets/images/Screenshot_20240323_011224_OneDrive (1).jpg",
+      "assets/images/Screenshot_20240323_011326_OneDrive (1).jpg",
+      "assets/images/Screenshot_20240323_011343_OneDrive (1).jpg",
+      "assets/images/Screenshot_20240323_011428_OneDrive (1).jpg"
+    ],
+    video: null,
+    intro: "以萬聖節為主題的節慶情境攝影，結合《聖誕夜驚魂》與南瓜、餅乾等道具擺拍，營造節慶氛圍。",
+    tools: "攝影",
+    role: "",
+    reflection: "",
+    award: ""
   }
 ];
