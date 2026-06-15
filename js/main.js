@@ -112,6 +112,7 @@
             title: it.title,
             category: g.brand,
             video: it.video,
+            poster: it.thumb ? thumb(it.thumb) : "",
             images: [],
             intro: "", tools: "", role: "", reflection: "", award: "",
             shopUrl: it.url,
@@ -170,7 +171,7 @@
   const lbInfo = document.getElementById("lbInfo");
 
   // 把一個媒體項目（影片或圖片）渲染成燈箱主畫面
-  function renderMedia(item) {
+  function renderMedia(item, poster) {
     if (!item) return '<div class="lb__placeholder"><span class="big">🐾</span><span>此作品圖片準備中</span></div>';
     if (item.type === "video") {
       const id = ytId(item.src);
@@ -186,7 +187,8 @@
       }
       const vid = vimeoId(item.src);
       if (vid) return '<iframe src="https://player.vimeo.com/video/' + vid + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
-      return '<video src="' + item.src + '" controls autoplay playsinline></video>';
+      return '<video src="' + item.src + '" ' + (poster ? 'poster="' + poster + '" ' : "") +
+        'controls autoplay playsinline preload="auto"></video>';
     }
     return '<img src="' + item.src + '" alt="" class="lb__gallery-img" />';
   }
@@ -195,7 +197,7 @@
     const media = buildMediaList(w);
 
     lbMedia.className = "lb__media" + (w.portrait ? " lb__media--portrait" : "");
-    lbMedia.innerHTML = renderMedia(media[0] || null);
+    lbMedia.innerHTML = renderMedia(media[0] || null, w.poster);
 
     // 縮圖切換列（多於一個媒體時才顯示）
     lbThumbs.innerHTML = "";
@@ -214,7 +216,7 @@
         }
         if (i === 0) el.classList.add("active");
         el.addEventListener("click", function () {
-          lbMedia.innerHTML = renderMedia(item);
+          lbMedia.innerHTML = renderMedia(item, w.poster);
           lbThumbs.querySelectorAll(".active").forEach(function (x) { x.classList.remove("active"); });
           el.classList.add("active");
           lbMedia.scrollIntoView({ block: "nearest" });
