@@ -159,12 +159,22 @@ a { color: inherit; text-decoration: none; }
 }
 .shorts__brand::before { content: "🛒"; }
 .shorts__brand:first-child { margin-top: 0; }
+/* 橫向滑動的影片架（一排往旁邊滑，省垂直空間） */
 .shorts {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  gap: 18px;
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  padding: 6px 2px 14px;
+  scrollbar-width: thin;
 }
+.shorts::-webkit-scrollbar { height: 8px; }
+.shorts::-webkit-scrollbar-thumb { background: rgba(255,255,255,.7); border-radius: 100px; }
 .short {
+  flex: 0 0 190px;
+  scroll-snap-align: start;
   background: var(--cream);
   border: 4px solid #fff;
   border-radius: 18px;
@@ -172,6 +182,9 @@ a { color: inherit; text-decoration: none; }
   box-shadow: var(--shadow);
   transition: transform .25s, box-shadow .25s;
   display: flex; flex-direction: column;
+}
+@media (max-width: 760px) {
+  .short { flex-basis: 150px; }
 }
 .short:hover { transform: translateY(-6px) rotate(-.6deg); box-shadow: 0 16px 34px rgba(58,74,85,.22); }
 .short__media { position: relative; aspect-ratio: 9 / 16; overflow: hidden; }
