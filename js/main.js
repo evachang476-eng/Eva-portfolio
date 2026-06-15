@@ -92,10 +92,10 @@
 
     groups.forEach(function (g) {
       if (!g.items || !g.items.length) return;
-      // 品牌標題
+      // 品牌標題（+ 整組成效備註）
       const label = document.createElement("h4");
       label.className = "shorts__brand reveal";
-      label.textContent = g.brand;
+      label.innerHTML = esc(g.brand) + (g.note ? ' <span class="shorts__note">📈 ' + esc(g.note) + "</span>" : "");
       wrap.appendChild(label);
       // 該品牌的卡片列
       const row = document.createElement("div");
@@ -110,7 +110,8 @@
           '<div class="short__media">' + media +
             '<div class="short__play"></div>' +
           "</div>" +
-          '<div class="short__title">' + esc(it.title) + "</div>";
+          '<div class="short__title">' + esc(it.title) + "</div>" +
+          (it.result ? '<div class="short__result">🛒 ' + esc(it.result) + "</div>" : "");
         // 點擊 → 在網站內直接播放（直式播放器）
         card.addEventListener("click", function () {
           openLightbox({
@@ -120,6 +121,7 @@
             poster: it.thumb ? thumb(it.thumb) : "",
             images: [],
             intro: "", tools: "", role: "", reflection: "", award: "",
+            result: it.result || "",
             shopUrl: it.url,
             portrait: true
           });
@@ -238,6 +240,7 @@
     if (w.category) html += '<span class="lb__badge">' + esc(w.category) + "</span>";
     html += '<h3 class="lb__title">' + esc(w.title) + "</h3>";
     if (w.award) html += '<div class="lb__award">' + esc(w.award) + "</div>";
+    if (w.result) html += field("📈 成效", w.result);
     if (w.intro) html += field("📖 作品簡介", w.intro);
     if (w.tools) html += field("🛠 技術運用 / 工具", w.tools);
     if (w.role) html += field("🎬 我的角色 / 分工", w.role);

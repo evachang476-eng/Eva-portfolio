@@ -42,7 +42,7 @@ const SHORTS = {
     {
       brand: "樂扣樂扣 Lock&Lock",
       items: [
-        { title: "樂扣樂扣 掀蓋款 Fun 飲杯", video: "assets/videos/shopee-1.mp4", url: "https://tw.shp.ee/1tnprjvv?smtt=0.0.9", thumb: "assets/images/shopee-1.jpg" },
+        { title: "樂扣樂扣 掀蓋款 Fun 飲杯", video: "assets/videos/shopee-1.mp4", url: "https://tw.shp.ee/1tnprjvv?smtt=0.0.9", thumb: "assets/images/shopee-1.jpg", result: "2–6 月帶動售出 55 支水壺" },
         { title: "微波玩美 Match 不鏽鋼保鮮盒", video: "assets/videos/shopee-2.mp4", url: "https://tw.shp.ee/pbfky9ef?smtt=0.0.9", thumb: "assets/images/shopee-2.jpg" },
         { title: "清新手提 耐熱玻璃隨行杯", video: "assets/videos/shopee-3.mp4", url: "https://tw.shp.ee/bpm23ppb?smtt=0.0.9", thumb: "assets/images/shopee-3.jpg" },
         { title: "搖搖杯比較", video: "assets/videos/shopee-4.mp4", url: "https://tw.shp.ee/lvnkco74?smtt=0.0.9", thumb: "assets/images/shopee-4.jpg" },
@@ -53,6 +53,7 @@ const SHORTS = {
     },
     {
       brand: "Nespresso",
+      note: "影片每月穩定帶動轉單",
       items: [
         { title: "Vertuo POP", video: "assets/videos/nespresso-2.mp4", url: "https://tw.shp.ee/bdph714u?smtt=0.0.9", thumb: "assets/images/nespresso-2.jpg" },
         { title: "Inissia", video: "assets/videos/nespresso-3.mp4", url: "https://tw.shp.ee/6ai0tfp2?smtt=0.0.9", thumb: "assets/images/nespresso-3.jpg" },
