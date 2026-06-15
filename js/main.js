@@ -31,19 +31,23 @@
   // 取得作品的第一段影片（支援 video 單一 或 videos 陣列）
   function firstVideo(w) { return w.video || (w.videos && w.videos[0]) || null; }
 
+  // 圖片可能是字串，或 { src, cap } 物件；統一取出路徑
+  function imgSrc(im) { return typeof im === "string" ? im : (im && im.src) || ""; }
+  function imgCap(im) { return typeof im === "string" ? "" : (im && (im.cap || im.caption)) || ""; }
+
   // 把作品的所有媒體整理成一個清單（影片在前、圖片在後）
   function buildMediaList(w) {
     const list = [];
     if (w.videos && w.videos.length) w.videos.forEach(function (v) { list.push({ type: "video", src: v }); });
     else if (w.video) list.push({ type: "video", src: w.video });
-    (w.images || []).forEach(function (src) { list.push({ type: "image", src: src }); });
+    (w.images || []).forEach(function (im) { list.push({ type: "image", src: imgSrc(im), caption: imgCap(im) }); });
     return list;
   }
 
   // 取得作品的封面（優先 cover，其次第一張圖，影片用 YouTube 封面）
   function coverOf(w) {
     if (w.cover) return thumb(w.cover);
-    if (w.images && w.images.length) return thumb(w.images[0]);
+    if (w.images && w.images.length) return thumb(imgSrc(w.images[0]));
     const v = firstVideo(w);
     if (v) {
       const id = ytId(v);
@@ -167,6 +171,7 @@
   /* ---------- 作品詳情燈箱 ---------- */
   const lb = document.getElementById("lightbox");
   const lbMedia = document.getElementById("lbMedia");
+  const lbCaption = document.getElementById("lbCaption");
   const lbThumbs = document.getElementById("lbThumbs");
   const lbInfo = document.getElementById("lbInfo");
 
@@ -198,6 +203,7 @@
 
     lbMedia.className = "lb__media" + (w.portrait ? " lb__media--portrait" : "");
     lbMedia.innerHTML = renderMedia(media[0] || null, w.poster);
+    lbCaption.textContent = (media[0] && media[0].caption) || "";
 
     // 縮圖切換列（多於一個媒體時才顯示）
     lbThumbs.innerHTML = "";
@@ -217,6 +223,7 @@
         if (i === 0) el.classList.add("active");
         el.addEventListener("click", function () {
           lbMedia.innerHTML = renderMedia(item, w.poster);
+          lbCaption.textContent = item.caption || "";
           lbThumbs.querySelectorAll(".active").forEach(function (x) { x.classList.remove("active"); });
           el.classList.add("active");
           lbMedia.scrollIntoView({ block: "nearest" });
