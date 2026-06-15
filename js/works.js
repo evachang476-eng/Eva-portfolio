@@ -54,7 +54,6 @@ const SHORTS = {
     {
       brand: "Nespresso",
       items: [
-        { title: "OL 品牌禮二選一", video: "assets/videos/nespresso-1.mp4", url: "https://tw.shp.ee/xrl92kgd?smtt=0.0.9", thumb: "assets/images/nespresso-1.jpg" },
         { title: "Vertuo POP", video: "assets/videos/nespresso-2.mp4", url: "https://tw.shp.ee/bdph714u?smtt=0.0.9", thumb: "assets/images/nespresso-2.jpg" },
         { title: "Inissia", video: "assets/videos/nespresso-3.mp4", url: "https://tw.shp.ee/6ai0tfp2?smtt=0.0.9", thumb: "assets/images/nespresso-3.jpg" },
         { title: "Inissia vs POP", video: "assets/videos/nespresso-4.mp4", url: "https://tw.shp.ee/epnfhuxu?smtt=0.0.9", thumb: "assets/images/nespresso-4.jpg" },
