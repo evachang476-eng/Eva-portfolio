@@ -80,8 +80,7 @@ const WORKS = [
       { src: "assets/images/劇情模式畫面.jpg", cap: "劇情模式：先介紹故事大綱，再以角色對話形式帶出劇情。我負責劇情切換的實現。" },
       { src: "assets/images/劇情模式畫面-1.jpg", cap: "角色切換（換皮模式）：保留角色邏輯本體，只切換外觀與對應資料，成功實現角色切換。" },
       { src: "assets/images/角色切換實現.jpg", cap: "角色切換（換皮模式）：保留角色邏輯本體，只切換外觀與對應資料，成功實現角色切換。" },
-      { src: "assets/images/技能畫面.jpg", cap: "技能畫面：以天狗為例，技能是「尋找出口」，發動後協助逃脫方找到出口方向。" },
-      { src: "assets/images/AI 音樂.jpg", cap: "配樂：使用 AI 生成的遊戲音樂（The Crimson Ringmaster）。" }
+      { src: "assets/images/技能畫面.jpg", cap: "技能畫面：以天狗為例，技能是「尋找出口」，發動後協助逃脫方找到出口方向。" }
     ],
     intro: "畢業專題遊戲作品《山嗨驚》。一款「逃脫 vs 抓捕」的對戰遊戲，分為馬戲團（抓捕方）與神獸（逃脫方）。遊戲選單有四個選項：劇情模式、遊戲玩法、快速遊玩、離開遊戲。",
     tools: "Unity、C++、Word",
