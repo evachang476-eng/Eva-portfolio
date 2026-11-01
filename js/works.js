@@ -26,7 +26,7 @@ const PROFILE = {
   intro: "嗨，我是張芷瑄，德明財經科技大學多媒體設計系。作品橫跨影片剪輯、插畫、平面與文創設計、到遊戲企劃。喜歡把腦中的想法一步步「具象化」，就像遊戲裡的存檔點，記錄每一段成長。",
   email: "evachang476@gmail.com",
   social: [],
-  skills: ["Premiere Pro", "DaVinci Resolve", "Illustrator", "Photoshop", "Procreate", "InDesign", "Unity", "Canva"]
+  skills: ["Premiere Pro", "DaVinci Resolve", "CapCut", "Illustrator", "Photoshop", "Procreate", "InDesign", "Unity", "Canva"]
 };
 
 /* ============================================================
