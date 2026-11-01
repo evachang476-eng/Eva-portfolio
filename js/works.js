@@ -45,6 +45,7 @@ const SHORTS = {
       tool: "CapCut 剪輯",
       items: [
         { title: "樂扣樂扣 掀蓋款 Fun 飲杯", video: "assets/videos/shopee-1.mp4", url: "https://tw.shp.ee/1tnprjvv?smtt=0.0.9", thumb: "assets/images/shopee-1.jpg" },
+        { title: "雲朵跳跳水壺", video: "assets/videos/shopee-8.mp4", url: "https://tw.shp.ee/my3ks5jq?fromSource=copy_link&smtt=0.0.9", thumb: "assets/images/shopee-8.jpg" },
         { title: "微波玩美 Match 不鏽鋼保鮮盒", video: "assets/videos/shopee-2.mp4", url: "https://tw.shp.ee/pbfky9ef?smtt=0.0.9", thumb: "assets/images/shopee-2.jpg" },
         { title: "清新手提 耐熱玻璃隨行杯", video: "assets/videos/shopee-3.mp4", url: "https://tw.shp.ee/bpm23ppb?smtt=0.0.9", thumb: "assets/images/shopee-3.jpg" },
         { title: "搖搖杯比較", video: "assets/videos/shopee-4.mp4", url: "https://tw.shp.ee/lvnkco74?smtt=0.0.9", thumb: "assets/images/shopee-4.jpg" },
