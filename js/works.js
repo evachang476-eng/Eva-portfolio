@@ -59,13 +59,13 @@ const SHORTS = {
       note: "影片每月穩定帶動轉單",
       tool: "Adobe Premiere Pro 剪輯",
       items: [
-        { title: "Vertuo POP", video: "assets/videos/nespresso-2.mp4", url: "https://tw.shp.ee/bdph714u?smtt=0.0.9", thumb: "assets/images/nespresso-2.jpg" },
         { title: "Inissia", video: "assets/videos/nespresso-3.mp4", url: "https://tw.shp.ee/6ai0tfp2?smtt=0.0.9", thumb: "assets/images/nespresso-3.jpg" },
         { title: "Inissia vs POP", video: "assets/videos/nespresso-4.mp4", url: "https://tw.shp.ee/epnfhuxu?smtt=0.0.9", thumb: "assets/images/nespresso-4.jpg" },
         { title: "奶泡機教學", video: "assets/videos/nespresso-5.mp4", url: "https://tw.shp.ee/1x7yn21b?smtt=0.0.9", thumb: "assets/images/nespresso-5.jpg" },
         { title: "Essenza Mini", video: "assets/videos/nespresso-6.mp4", url: "https://tw.shp.ee/bgxg2uct?smtt=0.0.9", thumb: "assets/images/nespresso-6.jpg" },
         { title: "Creatista Plus", video: "assets/videos/nespresso-7.mp4", url: "https://tw.shp.ee/3y19oeww?smtt=0.0.9", thumb: "assets/images/nespresso-7.jpg" },
-        { title: "CitiZ", video: "assets/videos/nespresso-8.mp4", url: "https://tw.shp.ee/9ne96xm1?smtt=0.0.9", thumb: "assets/images/nespresso-8.jpg" }
+        { title: "CitiZ", video: "assets/videos/nespresso-8.mp4", url: "https://tw.shp.ee/9ne96xm1?smtt=0.0.9", thumb: "assets/images/nespresso-8.jpg" },
+        { title: "Vertuo POP", video: "assets/videos/nespresso-2.mp4", url: "https://tw.shp.ee/bdph714u?smtt=0.0.9", thumb: "assets/images/nespresso-2.jpg" }
       ]
     }
   ]
