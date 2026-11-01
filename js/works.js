@@ -68,6 +68,25 @@ const SHORTS = {
   ]
 };
 
+/* ============================================================
+   置頂影片（顯示在大四實習短影音上方）— 達芬奇剪輯作品
+   ============================================================ */
+const FEATURED = [
+  {
+    title: "南機場夜市",
+    category: "影片剪輯 · DaVinci Resolve",
+    cover: "assets/images/南機場夜市_封面.jpg",   // 影片畫面當縮圖
+    poster: "assets/images/南機場夜市_封面.jpg",
+    video: "assets/videos/南機場夜市.mp4",
+    images: [],
+    intro: "南機場夜市街景影片，使用 DaVinci Resolve 剪輯完成。",
+    tools: "DaVinci Resolve",
+    role: "",
+    reflection: "",
+    award: ""
+  }
+];
+
 const WORKS = [
   /* ───────── 山嗨驚（畢業專題，置頂） ───────── */
   {

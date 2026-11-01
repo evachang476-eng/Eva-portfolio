@@ -133,11 +133,10 @@
   }
 
   /* ---------- 建立作品卡片 ---------- */
-  const grid = document.getElementById("grid");
-
-  function buildCards() {
-    grid.innerHTML = "";
-    WORKS.forEach(function (w, i) {
+  function buildCards(list, gridEl) {
+    if (!gridEl) return;
+    gridEl.innerHTML = "";
+    (list || []).forEach(function (w) {
       const card = document.createElement("div");
       card.className = "card reveal";
 
@@ -166,9 +165,8 @@
         "</div>";
 
       card.addEventListener("click", function () { openLightbox(w); });
-      grid.appendChild(card);
+      gridEl.appendChild(card);
     });
-    observeReveal();
   }
 
   /* ---------- 作品詳情燈箱 ---------- */
@@ -296,7 +294,8 @@
   /* ---------- 啟動 ---------- */
   applyProfile();
   renderShorts();
-  buildCards();
+  if (typeof FEATURED !== "undefined") buildCards(FEATURED, document.getElementById("featuredGrid"));
+  buildCards(WORKS, document.getElementById("grid"));
   // 作品大區塊（#work）很高，不套整區動畫，避免在窄螢幕上隱藏全部子元素；
   // 其餘區塊（首頁/關於/聯絡）仍淡入。
   document.querySelectorAll(".section").forEach(function (el) {
