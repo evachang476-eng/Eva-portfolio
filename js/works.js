@@ -75,8 +75,8 @@ const FEATURED = [
   {
     title: "南機場夜市",
     category: "影片剪輯 · DaVinci Resolve",
-    cover: "assets/images/南機場夜市_封面.jpg",   // 影片畫面當縮圖
-    poster: "assets/images/南機場夜市_封面.jpg",
+    cover: "assets/images/南機場夜市_vlog封面.jpg",   // 影片畫面當縮圖
+    poster: "assets/images/南機場夜市_vlog封面.jpg",
     video: "assets/videos/南機場夜市.mp4",
     images: [],
     intro: "南機場夜市街景影片，使用 DaVinci Resolve 剪輯完成。",
