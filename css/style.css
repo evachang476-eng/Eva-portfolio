@@ -155,8 +155,9 @@ a { color: inherit; text-decoration: none; }
 /* ===== 大四實習短影音（直式 Reels 牆） ===== */
 .shorts__brand {
   font-size: 1.05rem; font-weight: 800; color: var(--honey-deep);
-  margin: 26px 0 14px; display: flex; align-items: center; gap: 8px;
+  margin: 26px 0 14px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
 }
+.shorts__tool { font-size: .85rem; font-weight: 600; color: var(--ink-soft); }
 .shorts__brand::before { content: "🛒"; }
 .shorts__brand:first-child { margin-top: 0; }
 /* 橫向滑動的影片架（一排往旁邊滑，省垂直空間） */

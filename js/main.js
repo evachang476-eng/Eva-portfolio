@@ -95,7 +95,9 @@
       // 品牌標題（+ 整組成效備註）
       const label = document.createElement("h4");
       label.className = "shorts__brand reveal";
-      label.innerHTML = esc(g.brand) + (g.note ? ' <span class="shorts__note">📈 ' + esc(g.note) + "</span>" : "");
+      label.innerHTML = esc(g.brand) +
+        (g.tool ? ' <span class="shorts__tool">🎬 ' + esc(g.tool) + "</span>" : "") +
+        (g.note ? ' <span class="shorts__note">📈 ' + esc(g.note) + "</span>" : "");
       wrap.appendChild(label);
       // 該品牌的卡片列
       const row = document.createElement("div");
@@ -120,7 +122,7 @@
             video: it.video,
             poster: it.thumb ? thumb(it.thumb) : "",
             images: [],
-            intro: "", tools: "", role: "", reflection: "", award: "",
+            intro: "", tools: g.tool || "", role: "", reflection: "", award: "",
             result: it.result || "",
             shopUrl: it.url,
             portrait: true
