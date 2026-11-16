@@ -134,6 +134,33 @@
     });
   }
 
+  /* ---------- AI 作品（雙欄：影片 + 製作過程） ---------- */
+  function renderAI() {
+    const el = document.getElementById("aiFeature");
+    if (!el) return;
+    if (typeof AIWORK === "undefined" || !AIWORK) { el.style.display = "none"; return; }
+    const w = AIWORK;
+    const poster = w.cover ? thumb(w.cover) : "";
+    const steps = (w.process && w.process.length)
+      ? '<ol class="ai-feature__steps">' + w.process.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ol>"
+      : '<p class="ai-feature__pending">製作過程整理中…</p>';
+    el.innerHTML =
+      '<div class="ai-card reveal">' +
+        (poster ? '<img src="' + poster + '" alt="' + esc(w.title) + '" loading="lazy" />'
+                : '<div class="card__placeholder"><span class="big">🤖</span></div>') +
+        '<div class="card__play"></div>' +
+      "</div>" +
+      '<div class="ai-feature__text reveal">' +
+        (w.category ? '<span class="lb__badge">' + esc(w.category) + "</span>" : "") +
+        '<h4 class="ai-feature__title">' + esc(w.title) + "</h4>" +
+        (w.intro ? '<p class="ai-feature__intro">' + esc(w.intro) + "</p>" : "") +
+        (w.tools ? '<div class="ai-feature__tools">🛠 ' + esc(w.tools) + "</div>" : "") +
+        '<h5 class="ai-feature__h">📝 製作過程</h5>' + steps +
+      "</div>";
+    const card = el.querySelector(".ai-card");
+    if (card) card.addEventListener("click", function () { openLightbox(w); });
+  }
+
   /* ---------- 建立作品卡片 ---------- */
   function buildCards(list, gridEl) {
     if (!gridEl) return;
@@ -296,6 +323,7 @@
   /* ---------- 啟動 ---------- */
   applyProfile();
   renderShorts();
+  renderAI();
   if (typeof FEATURED !== "undefined") buildCards(FEATURED, document.getElementById("featuredGrid"));
   buildCards(WORKS, document.getElementById("grid"));
   // 作品大區塊（#work）很高，不套整區動畫，避免在窄螢幕上隱藏全部子元素；
