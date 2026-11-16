@@ -226,19 +226,20 @@ a { color: inherit; text-decoration: none; }
 /* ===== AI 作品（左影片 + 右製作過程） ===== */
 .ai-feature {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 300px 1fr;
   gap: 26px;
-  align-items: stretch;
+  align-items: start;
   margin-bottom: 56px;
 }
 .ai-card {
   position: relative;
+  width: 100%;
   border: 4px solid #fff;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   cursor: pointer;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 9 / 16;   /* 直式影片 */
   background: var(--sky-deep);
   transition: transform .25s, box-shadow .25s;
 }
@@ -260,7 +261,8 @@ a { color: inherit; text-decoration: none; }
 .ai-feature__steps li { margin-bottom: 8px; line-height: 1.7; }
 .ai-feature__pending { margin-top: 8px; color: var(--ink-soft); font-style: italic; }
 @media (max-width: 760px) {
-  .ai-feature { grid-template-columns: 1fr; gap: 16px; }
+  .ai-feature { grid-template-columns: 1fr; gap: 16px; justify-items: center; }
+  .ai-card { max-width: 260px; }
 }
 
 /* ===== 作品格狀 ===== */
