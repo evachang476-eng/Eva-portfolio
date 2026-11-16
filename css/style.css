@@ -226,8 +226,8 @@ a { color: inherit; text-decoration: none; }
 /* ===== AI 作品（左影片 + 右製作過程） ===== */
 .ai-feature {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 26px;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
   align-items: start;
   margin-bottom: 56px;
 }
@@ -262,7 +262,7 @@ a { color: inherit; text-decoration: none; }
 .ai-feature__pending { margin-top: 8px; color: var(--ink-soft); font-style: italic; }
 @media (max-width: 760px) {
   .ai-feature { grid-template-columns: 1fr; gap: 16px; justify-items: center; }
-  .ai-card { max-width: 260px; }
+  .ai-card { max-width: 200px; }
 }
 
 /* ===== 作品格狀 ===== */
